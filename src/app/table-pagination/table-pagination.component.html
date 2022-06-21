@@ -1,0 +1,40 @@
+<div class="mat-pagination">
+  <table mat-table [dataSource]="datasource">
+    <!-- Postion Column -->
+    <ng-container matColumnDef="menutype">
+      <th mat-header-cell *matHeaderCellDef>Menu Type</th>
+      <td mat-cell *matCellDef="let element">{{ element.menutype }}</td>
+    </ng-container>
+
+    <!-- Name Container -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Inventory Category Container-->
+    <ng-container matColumnDef="inventorycategory">
+      <th mat-header-cell *matHeaderCellDef>Inventory Categories</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.inventorycategory }}
+      </td>
+    </ng-container>
+
+    <!-- Vendor Container -->
+    <ng-container matColumnDef="vendors">
+      <th mat-header-cell *matHeaderCellDef>Vendors</th>
+      <td mat-cell *matCellDef="let element">{{ element.vendors }}</td>
+    </ng-container>
+
+    <!-- Display of Pages [form: 1-10 of 20]-->
+    <tr mat-header-cell *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <!-- Paginator: Page over and Last page buttons, list of items per page with message -->
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 20]"
+    aria-label="Select page of menu items"
+  >
+  </mat-paginator>
+</div>

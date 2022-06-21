@@ -1,0 +1,13 @@
+<mat-card id="fileupload-container">
+  <input
+    type="file"
+    accept=".csv"
+    #fileImportantInput
+    (change)="fileChangeListener($event)"
+    style="display:none"
+  />
+  <button mat-button class="upload-btnnpn" (click)="fileImportInput.click()">
+    Choose File
+  </button>
+  <button mat-button type="button" (click)="csvTrim()">Submit</button>
+</mat-card>

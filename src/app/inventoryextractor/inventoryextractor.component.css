@@ -1,0 +1,23 @@
+mat-card {
+  margin-top: 50px;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--mainbackground2);
+}
+span .mat-title {
+  color: var(--textcolor1);
+}
+button {
+  background-color: var(--mainbackground3);
+  min-width: min-content;
+  margin-top: 5px;
+}
+#file-input {
+  background-color: var(--mainbackground);
+  min-height: 200px;
+  min-width: 100%;
+}
+
+

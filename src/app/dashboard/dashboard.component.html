@@ -1,0 +1,19 @@
+<div id="activitycontainer">
+  <h2>Top Selling Categories</h2>
+  <div class="icategories-menu">
+    <a
+      *ngFor="let icategory of icategories"
+      routerLink="/detail/{{ icategory.id }}"
+    >
+      {{ icategory.name }}
+    </a>
+  </div>
+  <google-chart
+    #chart
+    [title]="chart.title"
+    [type]="chart.type"
+    [data]="chart.data"
+    [options]="chart.options"
+  >
+  </google-chart>
+</div>

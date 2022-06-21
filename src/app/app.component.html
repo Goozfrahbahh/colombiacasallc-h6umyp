@@ -1,0 +1,38 @@
+<div id="stationarysidebar">
+  <div id="logo-container">
+    <div id="logo"></div>
+  </div>
+  <menu-icon (click)="openNavigation()" id="menuicon"></menu-icon>
+  <a routerLink="/dashboard"><mat-icon id="iconsbar1">view_quilt</mat-icon></a>
+  <a routerLink="/icategories"
+    ><mat-icon id="iconsbar2">inventory_2</mat-icon></a
+  >
+  <a routerLink="/inventoryextractor"
+    ><mat-icon id="iconsbar3">file_open</mat-icon></a
+  >
+  <a mat-tooltip id="settingsModal"> </a>
+</div>
+<div id="nav-container">
+  <nav id="sidebar">
+    <mat-icon id="close" (click)="closeNavigation()">menu_open</mat-icon>
+    <a routerLink="/dashboard"
+      ><mat-icon class="iconNavbar">view_quilt</mat-icon>Dashboard</a
+    >
+    <a routerLink="/icategories" id="inventorysideNav"
+      ><mat-icon class="iconNavbar">inventory_2</mat-icon>Inventory
+    </a>
+    <a routerLink="/inventoryextractor" id="inventorysideNav"
+      ><mat-icon class="iconNavbar">file_open</mat-icon>File Upload</a
+    >
+  </nav>
+</div>
+<div id="projectWrapper">
+  <div id="title-container">
+    <h1>{{ title }}</h1>
+    <span>Casa Colombia Downtown</span>
+  </div>
+  <div id="displaybody">
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
+  </div>
+</div>

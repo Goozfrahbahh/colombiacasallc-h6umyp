@@ -1,0 +1,40 @@
+table {
+  font-family: Roboto, Arial, sans-serif;
+  width: 100%;
+  color: var(--textcolor1);
+  background-color: var(--mainbackground2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 6px 8px 0 rgba(0, 0, 0, 0.05);
+  font-size: 12px;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  padding: 20px;
+}
+table th {
+  display: flexbox;
+  align-items: stretch;
+  box-flex-group: 1 1 1 1;
+  font-size: 16px;
+  font-weight: 550;
+  text-align: center;
+  color: var(--textcolor1);
+  background-color: rgba(255, 255, 255, 0);
+  padding: 5px;
+  border-bottom: 2px solid var(--mainbackground2);
+}
+table td {
+  border-bottom: 2px solid var(--mainbackground2);
+  text-align: center;
+  padding-left: 0px;
+  color: var(--textcolor1);
+  border-radius: 0.2rem;
+}
+mat-datepicker-content {
+  background-color: #ffffff57 !important;
+}
+mat-label {
+  color: var(--textcolor1);
+}
+button {
+  min-width: 100px;
+  max-height: 35px;
+}

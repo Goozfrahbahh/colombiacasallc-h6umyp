@@ -1,0 +1,40 @@
+<div *ngIf="icategory">
+  <h2>{{ icategory.name }} Details</h2>
+  <div><label>Id:</label>{{ icategory.id }}</div>
+  <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Entree</th>
+            <th>Portion</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let icategory of icategory.entreeLists" id="listentrees">
+            <tr routerLink="/detail/{{ icategory.Entree }}" id="listentree">
+              <td>
+              {{
+                icategory.Entree
+              }}
+              </td>
+              <td>
+              {{
+              icategory.Portion
+              }}
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    <div>
+      <label for="icategory-name">Inventory Name: </label>
+      <input
+        id="icategory-name"
+        [(ngModel)]="icategory.name"
+        placeholder="name"
+      />
+    </div>
+
+    <button type="button" (click)="goBack()">Go Back</button>
+    <button type="button" (click)="save()">Save</button>
+  </div>
+</div>
+<app-hero-search></app-hero-search>

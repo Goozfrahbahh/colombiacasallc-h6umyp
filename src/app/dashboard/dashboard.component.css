@@ -1,0 +1,84 @@
+/* DashboardComponent's private CSS styles */
+#activitycontainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stertch;
+  background-color: var(--mainbackground3);
+  font-size: 16px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  border: 0;
+  border-radius: 0.35rem;
+  min-width: calc(100vw-40px);
+  flex: 1 1 auto;
+}
+
+h2 {
+  color: var(--textcolor1);
+  font-weight: 500;
+  text-align: left;
+  border-bottom: 0.2rem solid var(--mainbackground2);
+  border-bottom-width: 120%;
+  margin-right: -40px;
+}
+
+div.icategories-menu {
+  padding: 0;
+
+  /* flexbox */
+  display: -we bkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 5em;
+  gap: 5px;
+}
+
+a {
+  background-color: var(--mainbackground3);
+  text-decoration: none;
+  min-width: 120px;
+  max-width: 200px;
+  border-radius: 0.3rem;
+  padding: 0.4rem;
+  padding-top: 0.4rem;
+  padding-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--textcolor1);
+  min-height: 100px;
+  box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.05);
+
+  /* flexbox */
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+a:nth-child(1) {
+  background-color: var(--backgroundtransparent);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05);
+}
+a:nth-child(2) {
+  background-color: var(--backgroundtransparent);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05);
+}
+a:nth-child(3) {
+  background-color: var(--backgroundtransparent);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05);
+}
+a:nth-child(4) {
+  background-color: var(--backgroundtransparent);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.05);
+}
+.mat-flat-button,
+.mat-raised-button,
+.mat-fab,
+.mat-mini-fab {
+  color: var(--indicatorhighlight);
+}

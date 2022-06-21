@@ -1,0 +1,155 @@
+/* AppComponent's private CSS styles */
+div#title-container {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 6px 8px 0 rgba(0, 0, 0, 0.05);
+  width: 100%;
+  display: flex;
+  min-height: 2.2em;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-right: 40px;
+  z-index: 9999;
+  background-color: var(--mainbackground2);
+}
+#logo-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 35px;
+  text-shadow: #5c4242;
+}
+span {
+  font-size: 0.8rem;
+  color: var(--outlinecolor);
+  margin-left: 0.2rem;
+  z-index: 99999;
+  font-weight: 300;
+}
+h1 {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: var(--textcolor1);
+  padding-left: 3.5rem;
+}
+menu-icon {
+  display: flex;
+  color: var(--outlinecolor);
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: 0.6s ease-in-out;
+}
+.iconNavbar {
+  padding-right: 10px;
+}
+nav#sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  z-index: 999999;
+}
+nav#sidebar a {
+  padding-left: 0px;
+}
+div#projectWrapper {
+  display: flex;
+  flex-direction: column;
+  transition: 0.6s ease-in-out;
+  width: 100vw;
+  height: 100%;
+}
+mat-icon#close {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  z-index: 9;
+  margin-top: 8px;
+  margin-left: 126px;
+  margin-bottom: 10px;
+  color: var(--outlinecolor);
+  border-radius: 0.2rem;
+  opacity: 0;
+  transition: 0.6s ease-in-out;
+}
+div#stationarysidebar {
+  height: 100%;
+  background-color: var(--mainbackground2);
+  width: 40px;
+  position: fixed;
+  z-index: 99999999999999999999999;
+  padding-top: 30px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05), 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+  transition: 0.4s ease-in-out;
+  color: var(--textcolor1);
+}
+#iconsbar1,
+#iconsbar2,
+#iconsbar3 {
+  display: flex;
+  color: var(--outlinecolor);
+  justify-content: space-between;
+  cursor: pointer;
+  margin-top: 24px;
+  margin-left: 8px;
+  opacity: 1;
+  transition: 0.6s ease-in-out;
+}
+@media only screen and (max-width: 600px) {
+  div#titlecontainer {
+    min-width: 600px;
+  }
+}
+div#nav-container {
+  width: 30px;
+  background-color: var(--mainbackground2);
+  transition: 0.6s ease-in-out;
+  z-index: 999999999;
+}
+nav a {
+  width: 100px;
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: 11px;
+  display: flex;
+  margin-right: 2px;
+  align-items: center;
+  flex-basis: 25px;
+  color: var(--textcolor2);
+}
+nav .iconInventory {
+  margin-right: 10px;
+}
+nav .sidenavIcon {
+  margin-right: 4px;
+}
+nav a#inventorysideNav {
+  margin-left: -10px;
+}
+nav a:hover {
+  color: white;
+  background-color: #42545c;
+}
+nav a.active {
+  background-color: black;
+}
+div#displaybody {
+  display: flex;
+  position: relative;
+  margin-left: 45px;
+  padding: 10px;
+  flex-direction: column;
+  min-width: calc(100vw-40px);
+}
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

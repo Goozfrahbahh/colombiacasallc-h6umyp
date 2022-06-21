@@ -1,0 +1,34 @@
+<h2>Inventory Cutting Input</h2>
+<app-table></app-table>
+<div>
+  <label for="new-icategory">Cutting Category: </label>
+  <label for="new-amt">Amount Cut </label>
+  <input id="new-icategory" #icategoryName />
+  <button
+    type="button"
+    class="add-button"
+    (click)="add(icategoryName.value); icategoryName.value = ''"
+  >
+    Input Amount Cut
+  </button>
+</div>
+<div id="buttonwrapper">
+  <ul class="icategories">
+    <li *ngFor="let icategory of icategories">
+      <a routerLink="/detail/{{ icategory.id }}">
+        <span class="badge">{{ icategory.id }}</span
+        >{{ icategory.name }}
+
+        <button
+          type="button"
+          class="delete"
+          title="delete icategory"
+          (click)="delete(icategory)"
+        >
+          x
+        </button>
+      </a>
+    </li>
+  </ul>
+</div>
+
