@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -65,7 +66,7 @@ export class ExtractionService {
   // CSV breakdown into usuable form
   // @param csv
 
-  arr1: [{ Entree: string; Sold: number }, { Entree: string; Sold: number }];
+  arr1: any;
   masterList: any[] = [
     ['Aborrajado'],
     ['Arepa'],
@@ -180,20 +181,26 @@ export class ExtractionService {
     ['Sudado De Res'],
   ];
 
-  extractorPro(csvResult: any) {
+  extractorPro(csvresult: any, arr3: any) {
+    this.arr1 = [{ Entree: '', Sold: 0 }];
     //masterlist of all entrees from the inventory
-    for (let i = 0; i < csvResult.length; i++) {
+    for (let i = 0; i < csvresult.length; i++) {
+      let f = 0;
       for (let z = 0; z < this.masterList.length; z++) {
-        if (csvResult[i][0] === this.masterList.length[z]) {
+        if (csvresult[i].Entree === this.masterList[z][0]) {
+          arr3.entries(csvresult[i].Entree);
           this.arr1.push({
-            Entree: this.masterList[z],
-            Sold: csvResult[i][1],
+            Entree: this.masterList[z][0],
+            Sold: csvresult[i].Sold,
           });
-          console.log(this.arr1);
+          arr3 = this.arr1.map(function (val, index) {
+            val: this.arr1.Sold;
+            index: this.arr1.Entree;
+          });
         }
       }
     }
-
+    console.log(this.arr1);
     //Entree Class Bistec Chico Constructor
     class bistecChico {
       entreeList: any[] = [
@@ -223,10 +230,10 @@ export class ExtractionService {
     // We could use object method to reduce the repetitive values here
     //but since values always known this is not needed.
 
-    var arr2: any[] = [];
+    var arr2: any[][];
     for (let i: number = 0; i < bistecC.entreeList.length; i++) {
       for (let z: number = 0; z < this.arr1.length; z++) {
-        if (this.arr1[z][0] === bistecC.entreeList[i].Entree) {
+        if (this.arr1[z].Entree === bistecC.entreeList[i].Entree) {
           arr2.push([
             { Entree: bistecC.entreeList[i].Entree, Item: this.arr1[z][1] },
           ]);
@@ -275,7 +282,7 @@ export class ExtractionService {
       }
     }
     const bistecG = new bistecGrande();
-    var arr2: any[] = [];
+    var arr2: any[][];
     for (let i: number = 0; i < bistecG.entreeList.length; i++) {
       for (let z: number = 0; z < this.arr1.length; z++) {
         if (this.arr1[z][0] === bistecG.entreeList[i].Entree) {

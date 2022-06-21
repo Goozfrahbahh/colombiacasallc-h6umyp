@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NgxCsvParser, NgxCSVParserError } from 'ngx-csv-parser';
 
 import { UploaderService } from './uploader.service';
@@ -53,7 +53,9 @@ export class InventoryExtractorComponent {
     private extractionService: ExtractionService
   ) {}
 
-  @ViewChild('fileImportInput') fileImportInput: any;
+  
+
+  @ViewChild('fileImportInput', { static: false }) fileImportInput: ElementRef;
 
   fileChangeListener($event: any): void {
     const files = $event.srcElement.files;
@@ -61,7 +63,6 @@ export class InventoryExtractorComponent {
     this.header =
       (this.header as unknown as string) === 'true' || this.header === true;
     console.log(this.header);
-
     this.uploaderService.upload(uploadFile).subscribe((msg) => {
       this.message = msg;
     });
